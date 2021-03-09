@@ -86,10 +86,7 @@ public class Hash {
 	}
 	//The passwords are created by shuffling the char class of java within as many characters as the index, shifting the hash value.
 	private static char keyer(char ch,int hash) {
-	    if (!Character.isLetter(ch))
-	      return ch;
-	    if (Character.isUpperCase(ch))
-	      return (char) (((ch) + hash));
+	   
 	    return (char) (((ch) + hash));
 	  }
 	
