@@ -16,15 +16,15 @@ public class Hash {
 	//encryption function
 	public static void encrypt(String strClearText,int strKey) {
 		//the entered text is separated into individual characters and transmitted to the keyer with hash data to be locked.
+		char[]eas = new char[strClearText.length()];
 		for (int i = 0; i < strClearText.length(); i++)
-		      System.out.print(keyer(strClearText.charAt(i),strKey));
-		
-		
-		
-		    System.out.println();
-		
-		
+		      eas[i]=keyer(strClearText.charAt(i),strKey);
+		 System.out.println();
+		 String str = String. valueOf(eas);
+		 System.out.println(str);
 	}
+	
+	
 	//decryption function
 	public static void decrypt(String strEncrypted,int strKey) {
 		
@@ -81,7 +81,7 @@ public class Hash {
 						encrypt(x,x.hashCode()%60000); //we lock our message using our hash code
 						String chain = "Chain Hash: "+(LinkedList.lastIndex(list)+x.hashCode()).hashCode()+" ";
 						//System.out.println(LinkedList.lastIndex(list));
-					list=LinkedList.insert(list,chain+"Last Hash: "+ x.hashCode()+" ");
+					list=LinkedList.insert(list,chain+"Last Hash: "+ x.hashCode()+" Text: "+x);
 					
 					start();
 					 
@@ -105,7 +105,8 @@ public class Hash {
 				}
 				
 				else if(mode==3) {
-					LinkedList.printList(list);
+					System.out.println(LinkedList.printList(list));
+					
 					start();
 				}
 				else if(mode==4) {
@@ -119,5 +120,4 @@ public class Hash {
 					
 				
 	}
-	
 }

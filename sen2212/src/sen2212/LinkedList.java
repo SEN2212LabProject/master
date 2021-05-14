@@ -4,15 +4,12 @@ import java.io.*;
 
 
 
-//Java program to implement
-//a Singly Linked List
+
 public class LinkedList {
 
 	Node head; // head of list
 
-	// Linked list Node.
-	// This inner class is made static
-	// so that main() can access it
+	
 	
 
 	// Method to insert a new node
@@ -44,8 +41,10 @@ public class LinkedList {
 	}
 
 	// Method to print the LinkedList.
-	public static void printList(LinkedList list)
+	public static String printList(LinkedList list)
 	{
+		String str="";
+		
 		Node currNode = list.head;
 	
 		System.out.print("LinkedList: ");
@@ -53,11 +52,14 @@ public class LinkedList {
 		// Traverse through the LinkedList
 		while (currNode != null) {
 			// Print the data at current node
-			System.out.print(currNode.data + " ");
-	
+			//System.out.print(currNode.data + " ");
+			str=str+currNode.data+" ";
 			// Go to next node
 			currNode = currNode.next;
 		}
+		//System.out.println(str);
+		return str;
+		
 	}
 	public static String lastIndex(LinkedList list) {
 		
