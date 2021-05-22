@@ -1,15 +1,15 @@
 package sen2212;
 
-import java.io.*;
 
-
-
-
+//Java program to implement
+//a Singly Linked List
 public class LinkedList {
 
 	Node head; // head of list
 
-	
+	// Linked list Node.
+	// This inner class is made static
+	// so that main() can access it
 	
 
 	// Method to insert a new node
@@ -53,7 +53,7 @@ public class LinkedList {
 		while (currNode != null) {
 			// Print the data at current node
 			//System.out.print(currNode.data + " ");
-			str=str+currNode.data+" ";
+			str=str+currNode.data+"\n ";
 			// Go to next node
 			currNode = currNode.next;
 		}
@@ -77,5 +77,4 @@ public class LinkedList {
 	}
 	
 }
-
 
